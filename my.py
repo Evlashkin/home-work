@@ -2,3 +2,5 @@
 a=1
 b=1
 print(a+b)
+while a!=1:
+	pass
