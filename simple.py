@@ -1,2 +1,2 @@
 simple = 'origin'
-print(simple)
+print('Это просто вывод на экран переменной simple'simple)
