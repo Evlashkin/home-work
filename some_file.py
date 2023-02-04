@@ -8,3 +8,7 @@ else:
 
 some_func = a*b
 print(some_func)
+
+whath_is = uuu
+whynot = aaa
+concatin = whath_is + whynot
