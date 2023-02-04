@@ -4,3 +4,5 @@ b=1
 print(a+b)
 while a!=1:
 	pass
+new_s = "This is new string"
+print(new_s)
