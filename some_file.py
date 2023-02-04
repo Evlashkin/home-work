@@ -14,6 +14,4 @@ print("one more commit")
 print('я только что удалил строки выше, а затем поместил их в stash. В РЕЗУЛЬТАТТЕ ОНИ СНОВА ТУТ. А ЕЩЕ ЭТА СТРОКА БЫЛА'
       ' НАПИСАНА ПОСЛЕ работы со стешом.')
 
-whath_is = 'uuu'
-whynot = 'aaa'
-concatin = whath_is + whynot
+
