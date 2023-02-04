@@ -8,4 +8,4 @@ else:
 
 some_func = a*b
 print(some_func)
- 
+print("It's good job") 
