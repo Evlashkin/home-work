@@ -8,6 +8,3 @@ else:
 
 some_func = a*b
 print(some_func)
-print("It's good job")
-print("this change was maked in new directory")
-print("one more commit")
