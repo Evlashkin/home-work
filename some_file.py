@@ -16,4 +16,3 @@ print('я только что удалил строки выше, а затем 
 
 name = input("Введите свое имя - ")
 print("Привет, дорогой ", name)
-print("this string is created special for deleted after commit")
