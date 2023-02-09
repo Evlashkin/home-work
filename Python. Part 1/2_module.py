@@ -15,8 +15,7 @@ print("Здравствуйте, ", user_name + "!")
 
 departure_city = input("Введите город вылета: ")
 arrival_city = input("Введите город прилета: ")
-info =
-print(info)
+print(user_name, "Ваш билет из", departure_city, "в ", arrival_city, "успешно оформлен!")
 
 
 #--------------Second task-----------------------------------------
