@@ -79,6 +79,41 @@
 #     print("Третья монета фальшивая")
 # else:
 #     print("Вторая монета фальшивая")
-
-
-# Unit 5.4 - task 1
+#
+#
+# # Unit 5.4 - task 1.1
+# year_of_issue = int(input("Введите год выпуска: "))
+# speed_count = int(input("Введите количество скоростей: "))
+#
+# if year_of_issue >= 2018 and speed_count >= 24:
+#     print("Этот велик подходит!")
+# else:
+#     print("Этот не подходит!")
+#
+# # Unit 5.4 - task 1.2
+# year_of_issue = int(input("Введите год выпуска: "))
+# speed_count = int(input("Введите количество скоростей: "))
+#
+# if year_of_issue < 2018 or speed_count < 24:
+#     print("Этот велик не подходит!")
+# else:
+#     print("Этот велик подходит!")
+#
+#
+# # Unit 5.4 - task 2
+# total_score = int(input("Введите общий балл по 3-м экзаменам: "))
+# medal = int(input("Введите 1 если имеете золотую медаль; введите 0 - если нет: "))
+#
+# if total_score > 280 and medal == 1:
+#     print("Поздравляем, Вы поступили!")
+# else:
+#     print("К сожалению, Вы не поступили!")
+#
+#
+# # Unit 5.4 - task 3
+# temperature = int(input("Введите значение температуры в градусах Цельсия: "))
+#
+# if 0 <= temperature <= 100:
+#     print("Мы в допуске. Все нормально!")
+# else:
+#     print("Опасность! Температура вышла за пределы допуска!")
