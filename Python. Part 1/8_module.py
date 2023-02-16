@@ -180,7 +180,7 @@ boys = int(input("Введите количество мальчиков: "))
 girls = int(input("Введите количество девочек: "))
 people = ""
 
-if boys > 2 * girls or girls > 2* boys:
+if boys > 2 * girls or girls > 2 * boys:
     people = "нет решения"
 else:
     if boys == girls:
