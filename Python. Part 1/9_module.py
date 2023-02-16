@@ -168,15 +168,15 @@
 #
 # Final work - task 7
 cipher = input("Введите зашифрованное сообщение: ")
-all_latters = 0
+count = 0
 start = ""
 finish = ""
 
 for letter in cipher:
-    all_latters += 1
+    count += 1
+    if count % 2:
+        start += letter
+    else:
+        finish = letter + finish
 
-while all_latters:
-    
-for in range(all_latters):
-
-
+print("Расшифрованное сообщение:", start + finish)
