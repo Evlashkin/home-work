@@ -166,17 +166,17 @@
 # print("За день было произведено", summ_milk, "литров молока.")
 #
 #
-# Final work - task 7
-cipher = input("Введите зашифрованное сообщение: ")
-count = 0
-start = ""
-finish = ""
-
-for letter in cipher:
-    count += 1
-    if count % 2:
-        start += letter
-    else:
-        finish = letter + finish
-
-print("Расшифрованное сообщение:", start + finish)
+# # Final work - task 7
+# cipher = input("Введите зашифрованное сообщение: ")
+# count = 0
+# start = ""
+# finish = ""
+#
+# for letter in cipher:
+#     count += 1
+#     if count % 2:
+#         start += letter
+#     else:
+#         finish = letter + finish
+#
+# print("Расшифрованное сообщение:", start + finish)
