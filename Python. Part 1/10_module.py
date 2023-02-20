@@ -241,18 +241,39 @@
 #     print()
 #
 #
-# Final work - task 7
-height = int(input("Введите количество уровней пирамиды: "))
-num = 1
-for row in range(1, height + 1):
-    temp = row
-    for col in range(1, height + 1):
-        if temp == row:
-            print("" * (height - row), end="\t")
-        if row:
-            print(num, end="\t")
-            num += 2
-            row -= 1
-        else:
-            print(" ", end="\t")
-    print()
+# # Final work - task 7
+# height = int(input("Введите количество уровней пирамиды: "))
+# num = 1
+# for row in range(1, height + 1):
+#     temp = row
+#     for col in range(1, height + 1):
+#         if temp == row:
+#             print("\t" * (height - row), end="")
+#         if row and col != 1:
+#             print("\t", num, end="\t")
+#             num += 2
+#             row -= 1
+#         elif row:
+#             print(num, end="\t")
+#             num += 2
+#             row -= 1
+#         else:
+#             print("", end="\t")
+#     print()
+#
+#
+# # Final work - task 8
+# n = int(input("Введите количество глубину ямы: "))
+#
+# for row in range(1, n + 1):
+#     for col in range(1, n + 1):
+#         if col > row:
+#             print(".", end="")
+#         else:
+#             print(col, end="")
+#     for col2 in range(n, 0, -1):
+#         if col2 > row:
+#             print(".", end="")
+#         else:
+#             print(col2, end="")
+#     print()
