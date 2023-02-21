@@ -154,3 +154,61 @@
 #
 #
 # # Final work - task 4
+# num = float(input("Введите положительное действительное число: "))
+# print("Первая цифра после десятичной точки:", int(num * 10) % 10)
+#
+#
+# # Final work - task 5
+# import math
+#
+# rPlanet = float(input("Введите радиус теоретически возможной планеты, км: "))
+# vEarth = 10.8321 * 10**11
+# vPlanet = (4 / 3) * math.pi * rPlanet**3
+# if vEarth > vPlanet:
+#     print("Объём планеты Земля больше в", round(vEarth / vPlanet, 3), "раз")
+# elif vEarth < vPlanet:
+#     print("Объём планеты Земля меньше в", round(vPlanet / vEarth, 3), "раз")
+#
+#
+# # Final work - task 6
+# import math
+#
+# print("Введите местоположение коня:")
+# x = float(input("x: "))
+# y = float(input("y: "))
+#
+# print("\nВведите местоположение точки на доске:")
+# new_x = float(input("x: "))
+# new_y = float(input("y: "))
+#
+# if 0 <= x <= 0.8 and 0 <= y <= 0.8 and 0 <= new_x <= 0.8 and 0 <= new_y <= 0.8:
+#     x = int(x * 10) % 10
+#     y = int(y * 10) % 10
+#     new_x = int(new_x * 10) % 10
+#     new_y = int(new_y * 10) % 10
+#
+#     print(f"Конь в клетке({x}, {y})", end=". ")
+#     print(f"Точка в клетке({new_x}, {new_y})")
+#
+#     first_cathetus = abs(x - new_x)
+#     second_cathetus = abs(y - new_y)
+#     hypotenuse = math.sqrt(first_cathetus**2 + second_cathetus**2)
+#
+#     if hypotenuse == 2.23606797749979:
+#         print("Да, конь может ходить в эту точку.")
+#     else:
+#         print("Нет, конь не может ходить в эту точку")
+#
+# else:
+#     print("Координаты выходят за пределы шахматной доски. Размеры доски (0,8 x 0,8)")
+#
+#
+# # # Final work - task 7
+# first_num = float(input("Введите первое число: "))
+# second_num = float(input("Введите второе число: "))
+#
+# summ = first_num + second_num
+# diff = abs(first_num - second_num)
+# maximum = (summ + diff) / 2
+#
+# print("Наибольшее число:", maximum)
