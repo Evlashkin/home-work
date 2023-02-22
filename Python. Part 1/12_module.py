@@ -260,29 +260,29 @@
 # revers_num_without0(num)
 #
 #
-# Final work - task 5
-def count_letters(text, k , n):
-    text = str.upper(text)
-    n = str.upper(n)
-    print(text)
-    count_k = 0
-    count_n = 0
-    for item in text:
-        if item == str(k):
-            count_k += 1
-        elif item == n:
-            count_n += 1
-    print(f"Количество цифр {k}: {count_k}")
-    print(f"Количество букв {n}: {count_n}")
-
-
-text = input("Введите текст: ")
-num = int(input("Какую цифру ищем? "))
-letter = input("Какую букву ищем? ")
-
-count_letters(text, num, letter)
-
-
+# # Final work - task 5
+# def count_letters(text, k , n):
+#     text = str.upper(text)
+#     n = str.upper(n)
+#     print(text)
+#     count_k = 0
+#     count_n = 0
+#     for item in text:
+#         if item == str(k):
+#             count_k += 1
+#         elif item == n:
+#             count_n += 1
+#     print(f"Количество цифр {k}: {count_k}")
+#     print(f"Количество букв {n}: {count_n}")
+#
+#
+# text = input("Введите текст: ")
+# num = int(input("Какую цифру ищем? "))
+# letter = input("Какую букву ищем? ")
+#
+# count_letters(text, num, letter)
+#
+#
 # # Final work - task 6
 # def mynod(num1, num2):
 #     nod = 1
