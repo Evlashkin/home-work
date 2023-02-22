@@ -260,28 +260,29 @@
 # revers_num_without0(num)
 #
 #
-# # Final work - task 5
-# def count_letters(text, k , n):
-#     text = str.upper(text)
-#     print(text)
-#     count_k = 0
-#     count_n = 0
-#     for item in text:
-#         if item == str(k):
-#             count_k += 1
-#         elif item == n:
-#             count_n += 1
-#     print(f"Количество цифр {k}: {count_k}")
-#     print(f"Количество букв {n}: {count_n}")
-#
-#
-# text = input("Введите текст: ")
-# num = int(input("Какую цифру ищем? "))
-# letter = input("Какую букву ищем? ")
-#
-# count_letters(text, num, letter)
-#
-#
+# Final work - task 5
+def count_letters(text, k , n):
+    text = str.upper(text)
+    n = str.upper(n)
+    print(text)
+    count_k = 0
+    count_n = 0
+    for item in text:
+        if item == str(k):
+            count_k += 1
+        elif item == n:
+            count_n += 1
+    print(f"Количество цифр {k}: {count_k}")
+    print(f"Количество букв {n}: {count_n}")
+
+
+text = input("Введите текст: ")
+num = int(input("Какую цифру ищем? "))
+letter = input("Какую букву ищем? ")
+
+count_letters(text, num, letter)
+
+
 # # Final work - task 6
 # def mynod(num1, num2):
 #     nod = 1
@@ -306,14 +307,69 @@
 #
 #
 # # Final work - task 7
-def rock_paper_scissors():
-  # Здесь будет игра «Камень, ножницы, бумага»
-
-def guess_the_number():
-  # Здесь будет игра «Угадай число»
-
-def mainMenu():
-  # Здесь главное меню игры
-
-mainMenu():
-  pass
+# import random
+#
+#
+# def one_more(func, menu):
+#     one_more = input("Хотите сыграть еще раз? Введите:"
+#                      "\n1 - чтобы сыгать еще раз;"
+#                      "\nЛюбой другой символ - чтобы выйти в главное меню\n")
+#     if one_more == "1":
+#         func()
+#     else:
+#         menu()
+#
+#
+# def rock_paper_scissors():
+#     print("Добро пожаловать в игру \"Камень-ножницы-бумага\"!")
+#     flag = 1
+#     while flag:
+#         c_answer = random.randint(1, 3)
+#         u_answer = int(input("Введите номер своей фигуры (1 - камень, 2 - бумага, 3 - ножницы): "))
+#         if c_answer == 1 and u_answer == 2 or c_answer == 2 and u_answer == 3 or c_answer == 3 and u_answer == 1:
+#             print(f"Компьютер выбрал \"{c_answer}\". Вы победили!\n")
+#             flag = 0
+#         elif c_answer == u_answer:
+#             print(f"Компьютер выбрал \"{c_answer}\". У вас ничья!\n")
+#         else:
+#             print(f"Компьютер выбрал \"{c_answer}\". Вы проиграли!\n")
+#             flag = 0
+#
+#     one_more(rock_paper_scissors, mainMenu)
+#
+#
+# def guess_the_number():
+#     print("Добро пожаловать в игру \"Угадай число\"!")
+#     print("Необходимо угадать число от 1 до 100, которое я загадал.")
+#     comp_num = random.randint(1, 100)
+#     flag = 1
+#
+#     while flag:
+#         user_num = int(input("Угадайте число, которое я загадал: "))
+#         if user_num > comp_num:
+#             print("Ваше число больше, чем число, которое я загадал.\n")
+#         elif user_num < comp_num:
+#             print("Ваше число меньше, чем число, которое я загадал.\n")
+#         else:
+#             print(f"Поздравляю! Вы угадали. Я загадал {comp_num}\n")
+#             flag = 0
+#
+#     one_more(rock_paper_scissors, mainMenu)
+#
+#
+# def mainMenu():
+#     print("В какую игру желаете сыграть?"
+#           "\n1 - Камень-ножницы-бумага"
+#           "\n2 - Угадай число")
+#     choice = int(input("Введите номер игры: "))
+#     if choice == 2:
+#         guess_the_number()
+#     elif choice == 1:
+#         rock_paper_scissors()
+#     else:
+#         print("Игра с таким номером отсутствует. Выхожу из программы!")
+#
+#
+# print("Добрый день!")
+# print()
+# mainMenu()
