@@ -264,7 +264,6 @@
 # def count_letters(text, k , n):
 #     text = str.upper(text)
 #     n = str.upper(n)
-#     print(text)
 #     count_k = 0
 #     count_n = 0
 #     for item in text:
