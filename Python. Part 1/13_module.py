@@ -147,131 +147,192 @@
 # print(eqv(1e-14, 1e-14, 3e-14))
 #
 #__________________________________________________________________________
-# # Final work - task 1
-# def float_point(num):
-#     count = 0
-#     if num >= 1:
-#         while num > 10:
-#             count += 1
-#             num /= 10
-#     else:
-#         while num < 1:
-#             num *= 10
-#             count += 1
-#     return str(f"{round(num, 15)} * 10 ** {count}")
-#
-#
-# num = float(input("Введите положительное число: "))
-# if num > 0:
-#     print(float_point(num))
-# else:
-#     print("Введенное Вами число не является положительным.")
-#
-#
-# # Final work - task 2
-# def maximum_of_two(a, b):
-#     if a >= b:
-#         return a
-#     else:
-#         return b
-#
-#
-# def maximum_of_three(a, b, c):
-#     temp_max = maximum_of_two(a, b)
-#     if temp_max >= c:
-#         return temp_max
-#     else:
-#         return c
-#
-#
-# num_1 = float(input("Введите первое число: "))
-# num_2 = float(input("Введите второе число: "))
-# num_3 = float(input("Введите третье число: "))
-#
-# print("Наибольшее из трех чисел: ", maximum_of_three(num_1, num_2, num_3))
-#
-#
-# # Final work - task 3
-# def revers(num):
-#     new_num = ''
-#     for dig in str(num):
-#         new_num = dig + new_num
-#     return int(new_num)
-#
-#
-# n = int(input('Введите первое число (N): '))
-# k = int(input('Введите второе число (k): '))
-#
-# new_n = revers(n)
-# new_k = revers(k)
-# summ = new_n + new_k
-# new_summ = revers(summ)
-#
-# print("Первое число наоборот:", new_n)
-# print("Второе число наоборот:", new_k)
-# print("Сумма:", summ)
-# print("Сумма наоборот", new_summ)
-#
-#
-# # Final work - task 4
-# def count_numbers(num):
-#     count = 0
-#     for dig in str(num):
-#         count += 1
-#     return count
-#
-#
-# def change_number(num):
-#     digits_count = count_numbers(num)
-#     last_digit = num % 10
-#     first_digit = num // 10 ** (digits_count - 1)
-#     between_digits = num % 10 ** (digits_count - 1) // 10
-#     changed_num = last_digit * 10 ** (digits_count - 1) + between_digits * 10 + first_digit
-#     return changed_num
-#
-#
-# def main():
-#     first_n = int(input("Введите первое число: "))
-#     second_n = int(input("Введите второе число: "))
-#
-#     if count_numbers(first_n) < 3 or count_numbers(second_n) < 4:
-#         print("Ошибка количество цифр в числах не соответствует условию.")
-#     else:
-#         print('Изменённое первое число:', change_number(first_n))
-#         print('Изменённое второе число:', change_number(second_n))
-#         summ = change_number(first_n) + change_number(second_n)
-#         print('\nСумма чисел:', summ)
-#
-# main()
-#
-#
-# # Final work - task 5
-# def pendulum(start, finish):
-#     count = 0
-#     while start > finish:
-#         start -= start * 8.4 / 100
-#         count += 1
-#     return count
-#
-#
-# def main():
-#     start_ampl = float(input("Введите начальную амплитуду: "))
-#     finish_ampl = float(input("Введите амплитуду остановки: "))
-#     print(f"Маятник считается остановившимся через {pendulum(start_ampl, finish_ampl)} колебаний")
-#
-#
-# main()
-#
-#
-# # Final work - task 6
-# D = x ^ 3 − 3x ^ 2 − 12x + 10
-# x - глубина кладки в метрах
-# D - уровень опасности в условный единицах
-# x > 0 and x < 4
+# Final work - task 1
+def float_point(num):
+    count = 0
+    if num >= 1:
+        while num > 10:
+            count += 1
+            num /= 10
+    else:
+        while num < 1:
+            num *= 10
+            count += 1
+    return str(f"{round(num, 15)} * 10 ** {count}")
 
-# d = x ** 3 - 3 * x ** 2 - 12 * x + 10
 
-start_border = 0
-finish_border = 4
-x = (finish_border - start_border) / 2
+num = float(input("Введите положительное число: "))
+if num > 0:
+    print(float_point(num))
+else:
+    print("Введенное Вами число не является положительным.")
 
+
+# Final work - task 2
+def maximum_of_two(a, b):
+    if a >= b:
+        return a
+    else:
+        return b
+
+
+def maximum_of_three(a, b, c):
+    temp_max = maximum_of_two(a, b)
+    if temp_max >= c:
+        return temp_max
+    else:
+        return c
+
+
+num_1 = float(input("Введите первое число: "))
+num_2 = float(input("Введите второе число: "))
+num_3 = float(input("Введите третье число: "))
+
+print("Наибольшее из трех чисел: ", maximum_of_three(num_1, num_2, num_3))
+
+
+# Final work - task 3
+def revers(num):
+    new_num = ''
+    for dig in str(num):
+        new_num = dig + new_num
+    return int(new_num)
+
+
+n = int(input('Введите первое число (N): '))
+k = int(input('Введите второе число (k): '))
+
+new_n = revers(n)
+new_k = revers(k)
+summ = new_n + new_k
+new_summ = revers(summ)
+
+print("Первое число наоборот:", new_n)
+print("Второе число наоборот:", new_k)
+print("Сумма:", summ)
+print("Сумма наоборот", new_summ)
+
+
+# Final work - task 4
+def count_numbers(num):
+    count = 0
+    for dig in str(num):
+        count += 1
+    return count
+
+
+def change_number(num):
+    digits_count = count_numbers(num)
+    last_digit = num % 10
+    first_digit = num // 10 ** (digits_count - 1)
+    between_digits = num % 10 ** (digits_count - 1) // 10
+    changed_num = last_digit * 10 ** (digits_count - 1) + between_digits * 10 + first_digit
+    return changed_num
+
+
+def main():
+    first_n = int(input("Введите первое число: "))
+    second_n = int(input("Введите второе число: "))
+
+    if count_numbers(first_n) < 3 or count_numbers(second_n) < 4:
+        print("Ошибка количество цифр в числах не соответствует условию.")
+    else:
+        print('Изменённое первое число:', change_number(first_n))
+        print('Изменённое второе число:', change_number(second_n))
+        summ = change_number(first_n) + change_number(second_n)
+        print('\nСумма чисел:', summ)
+
+main()
+
+
+# Final work - task 5
+def pendulum(start, finish):
+    count = 0
+    while start > finish:
+        start -= start * 8.4 / 100
+        count += 1
+    return count
+
+
+def main():
+    start_ampl = float(input("Введите начальную амплитуду: "))
+    finish_ampl = float(input("Введите амплитуду остановки: "))
+    print(f"Маятник считается остановившимся через {pendulum(start_ampl, finish_ampl)} колебаний")
+
+
+main()
+
+
+# Final work - task 6
+
+# при x = 0.7320508075688774   - корень кубического уравнения (уровень допуска D приблизительно равен нулю)
+def deep_search(x_min_possible=0, x_max_possible=4, d=0.01):
+    x = (x_max_possible + x_min_possible) / 2
+
+    while abs(((x ** 3) - (3 * x ** 2) - (12 * x) + 10) - d) > 1e-15:
+        allowance = (x ** 3) - (3 * x ** 2) - (12 * x) + 10
+        if allowance > d:
+            x_min_possible = x
+            x = (x_max_possible + x_min_possible) / 2
+        elif allowance < d:
+            x_max_possible = x
+            x = (x_max_possible + x_min_possible) / 2
+    return x
+
+
+def main():
+    d = float(input("Введите максимально допустимый уровень опасности: "))
+    print("Приблизительная глубина безопасной кладки:", deep_search(d=d), "м")
+
+
+main()
+
+
+# Final work - task 6 - то, что от меня хотел скилбокс
+
+def deep_search(x_min_possible=0, x_max_possible=4, d=0.01):
+    x = (x_max_possible + x_min_possible) / 2
+
+    while abs((x**3) - (3 * x**2) - (12 * x) + 10) > d:
+        allowance = (x**3) - (3 * x**2) - (12 * x) + 10
+        if allowance > d:
+            x_min_possible = x
+            x = (x_max_possible + x_min_possible) / 2
+        elif allowance < d:
+            x_max_possible = x
+            x = (x_max_possible + x_min_possible) / 2
+    return x
+
+
+def main():
+    d = float(input("Введите максимально допустимый уровень опасности: "))
+    print("Приблизительная глубина безопасной кладки:", deep_search(d=d), "м")
+
+
+main()
+
+
+
+# Ксения, добрый день!
+#
+# Прошу проверить практическу работу по модулю №13.
+#
+# https://replit.com/@Evlashkin/module13
+#
+#
+#
+# P.S.
+#
+# Не понятна 6 задача в части обеспечения контроля ввода, т.к. на вход програме подается только максимальное допустимое отклонение уровня опасности от нуля. Учитывая, что, с точки зрения физ-мата, оклонение может быть как положительным, так и отрицательным, не ясно, что контролировать при вводе.
+#
+# Уровень опасности -  этот термин отвечает за рассчетную величину кубического уравнения?
+#
+# Если да, то он должен быть (приблизительно) равен?:
+#
+# Уровень опасности == максимальному допустимому отклонению уровня опасности?
+#
+# или если нет:
+#
+# Уровень опасности == уровень опасности (рассчетный) -  максимальному допустимому отклонению уровня опасности  <
+#
+# С целью определения глубины погружения, при котором уровень опасности максимально близок к нулю, я использовал бинарный поиск. К сожалению, мой ответ не соответствует приведенному в задаче примеру. Видимо я, что-то упустил.
