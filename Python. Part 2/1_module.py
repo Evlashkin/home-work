@@ -33,23 +33,26 @@
 op = input("Выберите операцию: ")
 result = 0
 flag = True
+expr = ""
 
 while (op != "+") and (op != "-") and (op != "*") and (op != "/"):
     op = input("Выберите операцию: ")
 operand = int(input("Сколько операндов? "))
-result = float(input(f"Введите операнд 1: "))
+first_num = float(input(f"Введите операнд 1: "))
+result = first_num
+expr = str(first_num)
 
 for item in range(2, operand + 1):
     num = float(input(f"Введите операнд {item}: "))
+    expr += (" " + op + " " + str(num))
+
     if op == "+":
         result += num
     elif op == "-":
         result -= num
-        print(f"Результат вычисления: {result}")
     elif op == "*":
         result *= num
-        print(f"Результат вычисления: {result}")
-    elif op == "/":
+    else:
         if num != 0:
             result /= num
         else:
@@ -58,4 +61,4 @@ for item in range(2, operand + 1):
             break
 
 if flag:
-    print(f"Результат вычисления:", result)
+    print(f"Результат вычисления: {expr} = ", result)
