@@ -117,7 +117,7 @@ SELECT
             'ENOUGH',
             'NOT ENOUGH'
             )
-        ) AS 'ENOUGH'
+        ) 'ENOUGH'
 FROM `good` g
 JOIN `good_category` gc ON gc.id = g.category_id
 WHERE g.count * g.price > 39000
@@ -138,3 +138,91 @@ FROM `good` g
 JOIN `good_category` gc ON gc.id = g.category_id
 WHERE g.count * g.price > 39000
 GROUP BY gc.id
+
+
+
+
+________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+/* Task 4.6 */
+1. Выведите все уникальные почтовые домены верхнего уровня длиной в три символа.
+
+SELECT DISTINCT
+	IF(
+        CHAR_LENGTH(REPLACE(SUBSTRING(`email`, -3, 3), '.', '')) = 3,
+        REPLACE(SUBSTRING(`email`, -3, 3), '.', ''),
+        'none'
+        ) AS `domain`
+FROM `user`
+
+
+
+SELECT DISTINCT
+	CASE
+        WHEN CHAR_LENGTH(REPLACE(SUBSTRING(`email`, -3, 3), '.', '')) = 3
+        THEN REPLACE(SUBSTRING(`email`, -3, 3), '.', '')
+     END AS `domain`
+FROM `user`
+
+
+
+SELECT DISTINCT
+	REPLACE(SUBSTRING(`email`, -3, 3), '.', '') `domain`
+FROM `user`
+WHERE CHAR_LENGTH(REPLACE(SUBSTRING(`email`, -3, 3), '.', '')) = 3
+ORDER BY `domain`
+
+
+2. Выведите родительские категории и все товары, входящие в них, а также их количество.
+/* Select всех товаров*/
+SELECT DISTINCT
+	gc2.id,
+    gc2.name,
+    GROUP_CONCAT(good.name SEPARATOR ', ') `names_of_goods`,
+    COUNT(good.name)
+FROM good_category
+JOIN good_category gc2 ON gc2.id = good_category.parent_id
+JOIN good ON good.category_id = good_category.id
+GROUP BY gc2.id
+
+/* Select всех категорий товаров*/
+SELECT DISTINCT
+	gc2.id,
+    gc2.name,
+    GROUP_CONCAT(good_category.name SEPARATOR ', ') `names_of_categories`,
+    COUNT(good_category.name)
+FROM good_category
+JOIN good_category gc2 ON gc2.id = good_category.parent_id
+GROUP BY gc2.id
+
+
+3. Если вам захочется больше практики, то мы подготовили дополнительную задачу повышенной сложности:
+Выведите строки формата ‘Статус заказа номер <order id> пользователя “<user name>” изменился <дата без времени> с
+<src status code> на <dst status code>’ для заказов, которые переходили со статусов «Доставлен» на «Оплачен»
+и созданных 25 мая 2015 года.
+
+SELECT
+	CONCAT(
+        'Статус заказа номер ',
+        `order`.`id`,
+        ' пользователя "'
+        `user`.`name`,
+        '" изменился ',
+        SUBSTRING(`order_status_change`.`time`, 1, 10),
+        ' c ',
+        `order_status_change`.`src_status_id`,
+        ' на ',
+        `order_status_change`.`dst_status_id`
+        )
+FROM `user`
+JOIN `order` ON `user`.`id` = `order`.`user_id`
+JOIN `order_status_change` ON `order_status_change`.`order_id` = `order`.`id`
+JOIN order_status ON `order_status`.`id` = order_status_change.src_status_id
+JOIN order_status ON `order_status`.`id` = order_status_change.dst_status_id
+
+WHERE
+`order_status_change`.`src_status_id` = 6 AND
+`order_status_change`.`dst_status_id` = 7 AND
+`order`.`creation_date` >= '2015-05-25' AND
+`order`.`creation_date` < '2015-05-26'
