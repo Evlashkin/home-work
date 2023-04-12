@@ -40,7 +40,6 @@
 # print("Сумма цен за каждый год:", round(sum(price_list_now), 2), round(sum(first_price_list), 2),
 #       round(sum(second_price_list), 2))
 
-
 # Unit 4.3 - task 1
 # left_board = int(input("Введите левую границу: "))
 # right_board = int(input("Введите правую границу: "))
